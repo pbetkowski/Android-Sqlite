@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yriaven.mystic.Baza">
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="wyloguj"
+        android:text="Wyloguj" />
+
+    <Button
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logout"
+        android:layout_alignStart="@+id/logout"
+        android:onClick="options"
+        android:text="Opcje" />
+
+
+
+    <TextView
+        android:id="@+id/IDView"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="    ID"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/Funkcja"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/IDView"
+        android:text="  Funkcja"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/Haslo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/Funkcja"
+        android:text="Hasło"
+        android:gravity="center"
+        android:textSize="30dp" />
+
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/IDView"
+        android:layout_toStartOf="@+id/Funkcja"
+        android:paddingLeft="35dp"
+        android:paddingTop="5dp"
+        android:textSize="15dp" />
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Funkcja"
+        android:layout_toRightOf="@id/textView2"
+        android:paddingLeft="17dp"
+        android:paddingTop="5dp"
+        android:textSize="15dp" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/Haslo"
+        android:layout_toRightOf="@id/textView3"
+        android:paddingLeft="13dp"
+        android:textSize="15dp"
+        android:paddingTop="5dp" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/textView2"
+        android:background="#DDDDDD" />
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/textView3"
+        android:background="#DDDDDD" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/textView2"
+        android:background="#DDDDDD" />
+</RelativeLayout>
