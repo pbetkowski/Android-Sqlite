@@ -28,10 +28,10 @@
 
     <TextView
         android:id="@+id/IDView"
-        android:layout_width="80dp"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:text="    ID"
+        android:text="  ID"
         android:textSize="30dp" />
 
     <TextView
@@ -54,19 +54,16 @@
         android:textSize="30dp" />
 
 
-
-
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/IDView"
         android:layout_toStartOf="@+id/Funkcja"
-        android:paddingLeft="35dp"
+        android:paddingLeft="20dp"
         android:paddingTop="5dp"
         android:textSize="15dp" />
-
 
 
     <TextView
@@ -75,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/Funkcja"
         android:layout_toRightOf="@id/textView2"
-        android:paddingLeft="17dp"
+        android:paddingLeft="5dp"
         android:paddingTop="5dp"
         android:textSize="15dp" />
 
@@ -87,9 +84,9 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/Haslo"
         android:layout_toRightOf="@id/textView3"
-        android:paddingLeft="13dp"
-        android:textSize="15dp"
-        android:paddingTop="5dp" />
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:textSize="15dp" />
 
     <View
         android:layout_width="2dp"

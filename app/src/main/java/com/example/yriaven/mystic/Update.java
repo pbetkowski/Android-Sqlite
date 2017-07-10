@@ -16,6 +16,7 @@ public class Update extends AppCompatActivity {
     EditText e1;
     EditText e2;
     EditText e3;
+    DBaseManager dbase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +25,12 @@ public class Update extends AppCompatActivity {
         b1 = (Button) findViewById(R.id.button1);
         b2 = (Button) findViewById(R.id.button2);
         e1 = (EditText) findViewById(R.id.editText3);
+        e1.setHint("Wybierz ID do aktualizacji");
         e2 = (EditText) findViewById(R.id.editText4);
         e3 = (EditText) findViewById(R.id.editText5);
+        dbase = new DBaseManager(this);
+        Update();
+
 
 
 
@@ -40,6 +45,38 @@ public class Update extends AppCompatActivity {
         Update.this.finish();
         startActivity(new Intent(Update.this, Opcje.class));
     }
+
+    public void Update ()
+    {
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                if (e1.getText().toString().equals("") || e2.getText().toString().equals("")
+                        || e3.getText().toString().equals(""))
+                {
+                    Toast.makeText(Update.this, "Uzupełnij wszystkie pola", Toast.LENGTH_SHORT).show();
+                }
+
+                else {
+                    boolean isupdated = dbase.Update(e1.getText().toString(), e2.getText().toString()
+                            , e3.getText().toString());
+
+                    if (isupdated == true) {
+                        Update.this.finish();
+                        startActivity(new Intent(Update.this, Baza.class));
+                    }
+                     else
+                    {
+                        Toast.makeText(Update.this, "Błąd", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+    }
+
+
 
 
 }

@@ -75,4 +75,17 @@ public class DBaseManager extends SQLiteOpenHelper {
         return db.delete(TABLE_NAME, "ID = ?", new String[] {id});
 
     }
+
+    public boolean Update (String id, String funkcja, String haslo)
+    {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(COL_1, id);
+        values.put(COL_2, funkcja);
+        values.put(Col_3, haslo);
+
+        db.update(TABLE_NAME, values, "ID = ?", new String[] {id});
+        return true;
+    }
 }
