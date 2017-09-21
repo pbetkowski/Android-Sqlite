@@ -36,7 +36,7 @@ public class Logowanie extends AppCompatActivity implements SensorEventListener 
         passw.setHint("Hasło");
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mProximity = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-        //startActivity(new Intent(Logowanie.this, Baza.class));  //do skasowania później
+        startActivity(new Intent(Logowanie.this, Baza.class));  //do skasowania później
 
 
         Toast message = Toast.makeText(Logowanie.this, "Wprowadź hasło", Toast.LENGTH_LONG);
